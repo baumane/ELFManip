@@ -262,6 +262,7 @@ class ELFManip(object):
                 # remove this entry, freeing up room for one user defined entry
                 logger.debug("removing GNU_STACK pdhr entry")
                 del self.phdrs['entries'][idx]
+                self.ehdr['e_phnum'] -= 1
 
                 # assert describe_p_type(gnu_stack_entry.p_type) == "GNU_STACK"
                 logger.info("should have room to add one section/segment")
