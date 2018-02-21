@@ -30,7 +30,6 @@ from constants import (SHF_WRITE,
 
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
 sh = logging.StreamHandler()
 sh.setFormatter(logging.Formatter('%(levelname)s   %(module)s.%(funcName)s :: %(message)s'))
 logger.addHandler(sh)
